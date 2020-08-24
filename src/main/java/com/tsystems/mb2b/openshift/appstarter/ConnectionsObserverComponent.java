@@ -27,10 +27,10 @@ public class ConnectionsObserverComponent {
     public int incConnections() {
         int result = connectionsCount.addAndGet(1);
         if (result > maxConnections) {
-            System.err.println("Not ready" + result);
+            System.out.println("Not ready" + result);
             AvailabilityChangeEvent.publish(eventPublisher, this, ReadinessState.REFUSING_TRAFFIC);
         } else {
-            System.err.println("Ready" + result);
+            System.out.println("Ready" + result);
         }
         return result;
     }
