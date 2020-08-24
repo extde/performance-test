@@ -1,0 +1,12 @@
+spec:
+  template:
+    spec:
+      containers:
+        -
+          resources:
+            limits:
+              memory: 512Mi
+            requests:
+              memory: 128Mi
+  strategy:
+    type: Rolling
